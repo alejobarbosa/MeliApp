@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		53F3F78227F237BE0011CC48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F78127F237BE0011CC48 /* AppDelegate.swift */; };
 		53F3F78427F237BE0011CC48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F78327F237BE0011CC48 /* SceneDelegate.swift */; };
-		53F3F78627F237BE0011CC48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F78527F237BE0011CC48 /* ViewController.swift */; };
+		53F3F78627F237BE0011CC48 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F78527F237BE0011CC48 /* BaseViewController.swift */; };
 		53F3F78927F237BE0011CC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F78727F237BE0011CC48 /* Main.storyboard */; };
 		53F3F78B27F237C00011CC48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F78A27F237C00011CC48 /* Assets.xcassets */; };
 		53F3F78E27F237C00011CC48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F78C27F237C00011CC48 /* LaunchScreen.storyboard */; };
@@ -39,7 +39,7 @@
 		53F3F77E27F237BE0011CC48 /* MeliApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeliApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F3F78127F237BE0011CC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53F3F78327F237BE0011CC48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		53F3F78527F237BE0011CC48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		53F3F78527F237BE0011CC48 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		53F3F78827F237BE0011CC48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53F3F78A27F237C00011CC48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53F3F78D27F237C00011CC48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,10 +99,9 @@
 		53F3F78027F237BE0011CC48 /* MeliApp */ = {
 			isa = PBXGroup;
 			children = (
+				53F3F7B127F238B40011CC48 /* Modules */,
 				53F3F78127F237BE0011CC48 /* AppDelegate.swift */,
 				53F3F78327F237BE0011CC48 /* SceneDelegate.swift */,
-				53F3F78527F237BE0011CC48 /* ViewController.swift */,
-				53F3F78727F237BE0011CC48 /* Main.storyboard */,
 				53F3F78A27F237C00011CC48 /* Assets.xcassets */,
 				53F3F78C27F237C00011CC48 /* LaunchScreen.storyboard */,
 				53F3F78F27F237C00011CC48 /* Info.plist */,
@@ -125,6 +124,31 @@
 				53F3F7A427F237C00011CC48 /* MeliAppUITestsLaunchTests.swift */,
 			);
 			path = MeliAppUITests;
+			sourceTree = "<group>";
+		};
+		53F3F7B127F238B40011CC48 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				53F3F7B327F23BAA0011CC48 /* New Group */,
+				53F3F7B227F238BD0011CC48 /* Base */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		53F3F7B227F238BD0011CC48 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				53F3F78527F237BE0011CC48 /* BaseViewController.swift */,
+				53F3F78727F237BE0011CC48 /* Main.storyboard */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		53F3F7B327F23BAA0011CC48 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53F3F78627F237BE0011CC48 /* ViewController.swift in Sources */,
+				53F3F78627F237BE0011CC48 /* BaseViewController.swift in Sources */,
 				53F3F78227F237BE0011CC48 /* AppDelegate.swift in Sources */,
 				53F3F78427F237BE0011CC48 /* SceneDelegate.swift in Sources */,
 			);
