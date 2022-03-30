@@ -8,7 +8,6 @@
 import UIKit
 
 protocol IHomePresenter: class {
-	// do someting...
 }
 
 class HomePresenter: IHomePresenter {	

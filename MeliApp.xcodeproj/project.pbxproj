@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5339FEFD27F501F4003035B0 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5339FEFA27F501F4003035B0 /* Montserrat-Bold.ttf */; };
+		5339FEFE27F501F4003035B0 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5339FEFB27F501F4003035B0 /* Montserrat-Medium.ttf */; };
+		5339FEFF27F501F4003035B0 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5339FEFC27F501F4003035B0 /* Montserrat-Regular.ttf */; };
+		5339FF0227F50492003035B0 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5339FF0127F50492003035B0 /* ExtensionUIColor.swift */; };
 		5362CFBA27F4C87700301AD0 /* HomeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362CFB227F4C87700301AD0 /* HomeConfiguration.swift */; };
 		5362CFBB27F4C87700301AD0 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362CFB327F4C87700301AD0 /* HomePresenter.swift */; };
 		5362CFBC27F4C87700301AD0 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362CFB427F4C87700301AD0 /* HomeRouter.swift */; };
@@ -43,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5339FEFA27F501F4003035B0 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		5339FEFB27F501F4003035B0 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		5339FEFC27F501F4003035B0 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		5339FF0127F50492003035B0 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		5362CFB227F4C87700301AD0 /* HomeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfiguration.swift; sourceTree = "<group>"; };
 		5362CFB327F4C87700301AD0 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		5362CFB427F4C87700301AD0 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -90,6 +98,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5339FEF727F50139003035B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53F3F78A27F237C00011CC48 /* Assets.xcassets */,
+				5339FEF927F50188003035B0 /* Fonts */,
+				5339FEF827F5015D003035B0 /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5339FEF827F5015D003035B0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				53F3F78C27F237C00011CC48 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5339FEF927F50188003035B0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5339FEFA27F501F4003035B0 /* Montserrat-Bold.ttf */,
+				5339FEFB27F501F4003035B0 /* Montserrat-Medium.ttf */,
+				5339FEFC27F501F4003035B0 /* Montserrat-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5339FF0027F5045B003035B0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5339FF0127F50492003035B0 /* ExtensionUIColor.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		53F3F77527F237BE0011CC48 = {
 			isa = PBXGroup;
 			children = (
@@ -114,10 +158,10 @@
 			isa = PBXGroup;
 			children = (
 				53F3F7B127F238B40011CC48 /* Modules */,
+				5339FEF727F50139003035B0 /* Resources */,
+				5339FF0027F5045B003035B0 /* Utils */,
 				53F3F78127F237BE0011CC48 /* AppDelegate.swift */,
 				53F3F78327F237BE0011CC48 /* SceneDelegate.swift */,
-				53F3F78A27F237C00011CC48 /* Assets.xcassets */,
-				53F3F78C27F237C00011CC48 /* LaunchScreen.storyboard */,
 				53F3F78F27F237C00011CC48 /* Info.plist */,
 			);
 			path = MeliApp;
@@ -143,8 +187,8 @@
 		53F3F7B127F238B40011CC48 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				53F3F7B327F23BAA0011CC48 /* Home */,
 				53F3F7B227F238BD0011CC48 /* Base */,
+				53F3F7B327F23BAA0011CC48 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -276,6 +320,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5339FEFF27F501F4003035B0 /* Montserrat-Regular.ttf in Resources */,
+				5339FEFD27F501F4003035B0 /* Montserrat-Bold.ttf in Resources */,
+				5339FEFE27F501F4003035B0 /* Montserrat-Medium.ttf in Resources */,
 				53F3F78E27F237C00011CC48 /* LaunchScreen.storyboard in Resources */,
 				53F3F78B27F237C00011CC48 /* Assets.xcassets in Resources */,
 				53F3F78927F237BE0011CC48 /* Main.storyboard in Resources */,
@@ -313,6 +360,7 @@
 				5362CFBB27F4C87700301AD0 /* HomePresenter.swift in Sources */,
 				5362CFBD27F4C87700301AD0 /* HomeViewController.swift in Sources */,
 				5362CFBA27F4C87700301AD0 /* HomeConfiguration.swift in Sources */,
+				5339FF0227F50492003035B0 /* ExtensionUIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

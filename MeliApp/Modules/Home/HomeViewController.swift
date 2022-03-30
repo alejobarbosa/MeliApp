@@ -47,7 +47,7 @@ class HomeViewController: BaseViewController {
     private func setUpViews(){
         self.btnStart.layer.cornerRadius = 10
         self.viewInfo.layer.borderWidth = 2
-        self.viewInfo.layer.borderColor = UIColor.white.cgColor
+        self.viewInfo.layer.borderColor = UIColor.AppColor.darkBlue.cgColor
         self.viewInfo.layer.cornerRadius = 10
         
         self.lblWelcome.text = HomeModel.Constants.welcome
