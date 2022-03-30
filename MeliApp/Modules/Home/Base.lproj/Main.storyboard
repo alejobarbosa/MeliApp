@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MeliApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Meli" translatesAutoresizingMaskIntoConstraints="NO" id="gik-QV-vkl">
+                                <rect key="frame" x="57" y="337.5" width="300" height="231"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gik-QV-vkl" secondAttribute="height" multiplier="100:77" id="04P-Hf-5yv"/>
+                                    <constraint firstAttribute="width" constant="300" id="WDT-HQ-NWL"/>
+                                </constraints>
+                            </imageView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSs-XC-MXI">
+                                <rect key="frame" x="0.0" y="393" width="414" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNu-EI-aEp">
+                                        <rect key="frame" x="207" y="42" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="38"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQN-wf-BNe">
+                                        <rect key="frame" x="207" y="78" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="XNu-EI-aEp" firstAttribute="centerY" secondItem="jSs-XC-MXI" secondAttribute="centerY" multiplier="0.7" id="1IE-xR-M35"/>
+                                    <constraint firstItem="vQN-wf-BNe" firstAttribute="centerY" secondItem="jSs-XC-MXI" secondAttribute="centerY" multiplier="1.3" id="Qu6-bQ-spO"/>
+                                    <constraint firstItem="XNu-EI-aEp" firstAttribute="centerX" secondItem="jSs-XC-MXI" secondAttribute="centerX" id="hNT-4Q-Ggq"/>
+                                    <constraint firstItem="vQN-wf-BNe" firstAttribute="centerX" secondItem="jSs-XC-MXI" secondAttribute="centerX" id="jg4-lr-63h"/>
+                                    <constraint firstAttribute="height" constant="120" id="uK8-8S-A78"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZpM-u8-VN2">
+                                <rect key="frame" x="31" y="493" width="352" height="101"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtk-gK-Er6">
+                                        <rect key="frame" x="176" y="20" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cd-8A-cwz">
+                                        <rect key="frame" x="176" y="28" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="352" id="TI6-2b-ejn"/>
+                                    <constraint firstItem="Gtk-gK-Er6" firstAttribute="centerX" secondItem="ZpM-u8-VN2" secondAttribute="centerX" id="XSf-XA-Ntu"/>
+                                    <constraint firstItem="Gtk-gK-Er6" firstAttribute="top" secondItem="ZpM-u8-VN2" secondAttribute="top" constant="20" id="hYk-FN-cJO"/>
+                                    <constraint firstItem="7cd-8A-cwz" firstAttribute="centerX" secondItem="ZpM-u8-VN2" secondAttribute="centerX" id="pNK-Bc-dSa"/>
+                                    <constraint firstAttribute="height" constant="101" id="uu1-UH-HHJ"/>
+                                    <constraint firstItem="7cd-8A-cwz" firstAttribute="top" secondItem="Gtk-gK-Er6" secondAttribute="bottom" constant="8" id="xBx-v9-QHo"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhK-6c-Ytz">
+                                <rect key="frame" x="41.5" y="881" width="331" height="50"/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.43137254899999999" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wGJ-Ce-Url"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Empezar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.90980392160000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XhK-6c-Ytz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="2" id="3wX-8z-Duv"/>
+                            <constraint firstItem="jSs-XC-MXI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dxt-tW-5sy"/>
+                            <constraint firstItem="gik-QV-vkl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KDk-Bp-UnL"/>
+                            <constraint firstItem="jSs-XC-MXI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="SzE-SE-V4b"/>
+                            <constraint firstItem="jSs-XC-MXI" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Uhc-Vx-9xN"/>
+                            <constraint firstItem="XhK-6c-Ytz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Uqh-PO-pDR"/>
+                            <constraint firstItem="XhK-6c-Ytz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="ZaI-cO-P0y"/>
+                            <constraint firstItem="ZpM-u8-VN2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dJa-ec-X2B"/>
+                            <constraint firstItem="ZpM-u8-VN2" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.2" id="eTU-Ob-8mw"/>
+                            <constraint firstItem="gik-QV-vkl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="p4r-po-vHK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnStart" destination="XhK-6c-Ytz" id="9bz-Ct-zWk"/>
+                        <outlet property="btnStartYPosition" destination="3wX-8z-Duv" id="vrU-4Q-dSx"/>
+                        <outlet property="imgMeliWidth" destination="WDT-HQ-NWL" id="l5g-gN-ZXn"/>
+                        <outlet property="imgMeliYPosition" destination="p4r-po-vHK" id="x42-Hw-86H"/>
+                        <outlet property="lblDescription" destination="7cd-8A-cwz" id="J42-mL-xga"/>
+                        <outlet property="lblInfo" destination="vQN-wf-BNe" id="hBb-i2-qSs"/>
+                        <outlet property="lblName" destination="Gtk-gK-Er6" id="kcs-4V-eHn"/>
+                        <outlet property="lblWelcome" destination="XNu-EI-aEp" id="nEv-pd-HoK"/>
+                        <outlet property="viewInfo" destination="ZpM-u8-VN2" id="OXl-5f-8Ob"/>
+                        <outlet property="viewInfoYPosition" destination="eTU-Ob-8mw" id="d2n-7M-XTq"/>
+                        <outlet property="viewWelcome" destination="jSs-XC-MXI" id="LFL-Bz-DNU"/>
+                        <outlet property="viewWelcomeYPosition" destination="Uhc-Vx-9xN" id="P6z-PE-oT1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="81"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Meli" width="300" height="231.33332824707031"/>
+    </resources>
+</document>

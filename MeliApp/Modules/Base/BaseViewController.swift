@@ -8,6 +8,9 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    
+    let deviceSize = UIScreen.main.bounds.size
+    var window: UIWindow?
 
     override func viewDidLoad() {
         super.viewDidLoad()
