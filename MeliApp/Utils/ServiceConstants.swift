@@ -15,6 +15,9 @@ struct ServiceConstants {
         static let categoryKey = "category"
         static let offsetKey = "offset"
         static let siteId = "{SITE_ID}"
+        static let itemId = "{ITEM_ID}"
+        static let allKey = "all"
+        static let includeKey = "include_attributes"
     }
     
     ///Builder to get the each url

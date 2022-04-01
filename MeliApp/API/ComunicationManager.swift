@@ -12,7 +12,7 @@ class ComunicationManager {
     
     let session = URLSession(configuration: .default)
     
-    ///Method to search a product
+    //MARK: - Get Product List
     func searchForProduct(query: String,
                           offset: Int,
                           handler: @escaping (Result<Products, ErrorResponses>) -> Void) {
@@ -81,6 +81,78 @@ class ComunicationManager {
 
             handler(.success(serviceResponse))
         }
+        task.resume()
+    }
+    
+    //MARK: - Get Product Details
+    func getProductDetail(forProduct productId: String,
+                          handler: @escaping (Result<ProductDetail, ErrorResponses>) -> Void) {
+        
+        //Building URL
+        let queryItem = URLQueryItem(name: ServiceConstants.ServiceKeys.includeKey,
+                                     value: ServiceConstants.ServiceKeys.allKey)
+        let path = ServiceConstants.URL().getProductDetailPath()
+        let fullPath = path.replacingOccurrences(of: ServiceConstants.ServiceKeys.itemId, with: productId)
+        guard let url = URL(string: fullPath) else {
+            Logger.buildingURLError.error("Error creating the URL for get product detail service call")
+            return handler(.failure(.invalidURL))
+        }
+        
+        guard var components = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
+            Logger.buildingURLError.error("Error creating the URL for get product detail service call")
+            return handler(.failure(.invalidURL))
+        }
+        components.queryItems = [queryItem]
+        guard let composedUrl = components.url else {
+            Logger.buildingURLError.error("Error creating the URL for get product detail service call")
+            return handler(.failure(.invalidURL))
+        }
+        
+        //Creating Request
+        var request = URLRequest(url: composedUrl)
+        request.httpMethod = ServiceConstants.ServiceCommonHeaders.httpGet
+        request.setValue(ServiceConstants.ServiceCommonHeaders.applicationJSON,
+                         forHTTPHeaderField: ServiceConstants.ServiceCommonHeaders.contentTypeKey)
+        request.setValue(ServiceConstants.ServiceCommonHeaders.applicationJSON,
+                         forHTTPHeaderField: ServiceConstants.ServiceCommonHeaders.acceptKey)
+        
+        //Executing Request
+        let task = session.dataTask(with: request) { data, response, error in
+            if let error = error {
+                Logger.callServiceError.error("get product detail service error: \(error.localizedDescription)")
+                handler(.failure(.unknownError(error)))
+                return
+            }
+            
+            //Handling Response
+            let httpResposne = response as! HTTPURLResponse
+            guard case 200..<300 = httpResposne.statusCode else {
+                Logger.callServiceError.error("get product detail service error: \(httpResposne.statusCode)")
+                handler(.failure(.serviceFailure(httpResposne.statusCode)))
+                return
+            }
+            
+            guard let data = data else {
+                Logger.dataError.error("get product detail service error: Missing Data")
+                handler(.failure(.emptyResponse))
+                return
+            }
+            
+            let serviceResponse: ProductDetail
+            
+            //Parsing Data
+            do {
+                serviceResponse = try JSONDecoder().decode(ProductDetail.self, from: data)
+            } catch {
+                Logger.castError.error("get product detail parsing error: \(error.localizedDescription)")
+                let json = String(data: data, encoding: .utf8)
+                handler(.failure(.invalidResponse(error, json)))
+                return
+            }
+
+            handler(.success(serviceResponse))
+        }
+        
         task.resume()
     }
     

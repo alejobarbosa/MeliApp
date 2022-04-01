@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailViewController" customModule="MeliApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3uB-zI-3bx">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DN1-2l-BUZ">
+                            <rect key="frame" x="94" y="86" width="240" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="128" id="KjV-lE-8dW"/>
+                            </constraints>
+                            <viewLayoutGuide key="contentLayoutGuide" id="BmF-Kq-sdA"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="Kj0-Ip-uHA"/>
+                        </scrollView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nuevo | 1229 vendidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKc-3H-O21">
+                            <rect key="frame" x="15" y="18" width="134" height="15"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat Medium" pointSize="12"/>
+                            <color key="textColor" red="0.59607845540000004" green="0.59607845540000004" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple iPhone 11 (128 GB) - Negro" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5r-CH-KMq">
+                            <rect key="frame" x="15" y="41" width="261" height="18.5"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat Medium" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="iKc-3H-O21" firstAttribute="leading" secondItem="3uB-zI-3bx" secondAttribute="leading" constant="15" id="070-Mo-iTR"/>
+                        <constraint firstItem="iKc-3H-O21" firstAttribute="top" secondItem="3uB-zI-3bx" secondAttribute="top" constant="18" id="4ri-tc-zim"/>
+                        <constraint firstAttribute="trailing" secondItem="Z5r-CH-KMq" secondAttribute="trailing" constant="99" id="Gfc-Q6-EEi"/>
+                        <constraint firstAttribute="height" constant="700" id="QLt-Sq-uuG"/>
+                        <constraint firstItem="Z5r-CH-KMq" firstAttribute="top" secondItem="iKc-3H-O21" secondAttribute="bottom" constant="8" symbolic="YES" id="agU-QD-Lra"/>
+                        <constraint firstItem="Z5r-CH-KMq" firstAttribute="leading" secondItem="iKc-3H-O21" secondAttribute="leading" id="eX0-LV-dq6"/>
+                        <constraint firstItem="DN1-2l-BUZ" firstAttribute="centerX" secondItem="3uB-zI-3bx" secondAttribute="centerX" id="pFf-Ii-pBU"/>
+                        <constraint firstItem="DN1-2l-BUZ" firstAttribute="width" secondItem="3uB-zI-3bx" secondAttribute="width" multiplier="0.64" id="uum-4f-ePe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3uB-zI-3bx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8SB-Rg-Opi"/>
+                <constraint firstItem="3uB-zI-3bx" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="JGn-dz-emr"/>
+                <constraint firstItem="3uB-zI-3bx" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="iFV-KM-N9V"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="70"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -31,6 +31,7 @@ class ProductCell: UITableViewCell {
         self.lblShipping.isHidden = !(product.shipping?.freeShipping ?? false)
     }
     
+    // MARK: - Set Price Label
     ///Method to set the text for the price label
     private func setPriceLabel(price: Double, currency: String){
         let priceString = self.getProductPrice(price: price) + currency
@@ -50,6 +51,7 @@ class ProductCell: UITableViewCell {
         self.lblPrice.adjustsFontSizeToFitWidth = true
     }
     
+    // MARK: - Set Installment Label
     ///Method to set the text for the installment label
     private func setInstallmentLabel(installment: Installment?) {
         var installmentString = self.getProductInterests(installment: installment)
@@ -68,6 +70,7 @@ class ProductCell: UITableViewCell {
         self.lblInstallment.attributedText = mutablePriceString
     }
     
+    // MARK: - Get Product Price
     ///Method to fortmat the price to currency
     private func getProductPrice(price: Double) -> String{
         let formatter = NumberFormatter()
@@ -79,6 +82,7 @@ class ProductCell: UITableViewCell {
         return priceString
     }
     
+    // MARK: - Get Product Installment
     ///Method to fortmat the installment to currency
     func getProductInterests(installment: Installment?) -> String {
         let numberOfPayments = installment?.quantity ?? 0

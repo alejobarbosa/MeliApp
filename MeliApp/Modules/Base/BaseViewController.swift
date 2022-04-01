@@ -70,9 +70,14 @@ class BaseViewController: UIViewController {
     }
     
     ///Method to show an alert controller
-    public func showErrorView(title: String? = "Error", message: String){
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    public func showErrorView(message: String, handlerAccept: ((UIAlertAction) -> Void)? = nil){
+        let alertController = UIAlertController(title: GenericConstants.ErrorView.errorTitle,
+                                                message: message,
+                                                preferredStyle: .alert)
         alertController.modalPresentationStyle = .overCurrentContext
+        alertController.addAction(UIAlertAction(title: GenericConstants.acceptTitle,
+                                                style: .default,
+                                                handler: handlerAccept))
         self.present(alertController, animated: true, completion: nil)
     }
 

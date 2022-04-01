@@ -50,7 +50,9 @@ extension ProductListViewController: IProductListViewController {
     }
     
     func showData(){
-        self.tableViewProducts.setContentOffset(.zero, animated:true)
+        if (self.interactor?.isNewCall ?? true) {
+            self.tableViewProducts.setContentOffset(.zero, animated:true)
+        }
         self.showActivityIndicator(show: false)
         self.tableViewProducts.reloadData()
     }
@@ -75,6 +77,21 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return ProductCell.height
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let productId = self.interactor?.products[indexPath.row].id {
+            self.router?.navigateToProductDetail(productId: productId)
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let height = scrollView.frame.size.height
+        let contentYoffset = scrollView.contentOffset.y
+        let distanceFromBottom = scrollView.contentSize.height - contentYoffset
+        if distanceFromBottom < height {
+            self.interactor?.getMoreProducts()
+        }
+    }
 	
 }
 
@@ -83,6 +100,7 @@ extension ProductListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.view.endEditing(true)
         self.showActivityIndicator(show: true)
+        self.interactor?.isNewCall = true
         self.interactor?.searchForProduct(text: searchBar.text ?? "")
     }
     

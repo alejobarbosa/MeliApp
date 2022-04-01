@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol IHomeInteractor: class {
+protocol IHomeInteractor {
 	var parameters: [String: Any]? { get set }
 }
 

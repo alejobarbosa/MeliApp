@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol IProductListRouter: class {
-	// do someting...
+protocol IProductListRouter: IBaseRouter {
+    func navigateToProductDetail(productId: String)
 }
 
 class ProductListRouter: IProductListRouter {	
@@ -17,4 +17,10 @@ class ProductListRouter: IProductListRouter {
 	init(view: ProductListViewController?) {
 		self.view = view
 	}
+    
+    func navigateToProductDetail(productId: String) {
+        let vc = ProductDetailConfiguration.setup(productId: productId)
+        self.view?.navigationController?.pushViewController(vc,
+                                                            animated: true)
+    }
 }

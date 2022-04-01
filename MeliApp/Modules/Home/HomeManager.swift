@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol IHomeManager: class {
+protocol IHomeManager {
 	// do someting...
 }
 

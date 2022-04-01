@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol IProductListPresenter {
+protocol IProductListPresenter: IBasePresenter {
     func showError(message: String)
     func showData()
 }

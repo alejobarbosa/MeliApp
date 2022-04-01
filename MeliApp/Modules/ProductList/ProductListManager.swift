@@ -8,7 +8,7 @@
 import Foundation
 import os.log
 
-protocol IProductListManager: class {
+protocol IProductListManager:IBaseManager {
     func searchForProduct(text: String,
                           offset: Int,
                           handler: @escaping (Result<Products, ErrorResponses>) -> Void)
