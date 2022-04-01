@@ -21,12 +21,12 @@ extension UIColor{
         }
         
         let scanner = Scanner(string: hexWithoutSymbol)
-        var hexInt:UInt32 = 0x0
-        scanner.scanHexInt32(&hexInt)
+        var hexInt:UInt64 = 0x0
+        scanner.scanHexInt64(&hexInt)
         
-        var r:UInt32!
-        var g:UInt32!
-        var b:UInt32!
+        var r:UInt64!
+        var g:UInt64!
+        var b:UInt64!
         switch (hexWithoutSymbol.count) {
         case 3: // #RGB
             r = ((hexInt >> 4) & 0xf0 | (hexInt >> 8) & 0x0f)
@@ -49,5 +49,6 @@ extension UIColor{
     struct AppColor {
         static let yellow = UIColor(hex: "FEE800")
         static let darkBlue = UIColor(hex: "2E3272")
+        static let green = UIColor(hex: "5BB478")
     }
 }

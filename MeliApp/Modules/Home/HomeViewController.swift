@@ -3,11 +3,11 @@
 //  MeliApp
 //
 //  Created by Luis Alejandro Barbosa Lee on 30/03/22.
-//  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
+//  Copyright (c) 2022 Luis Alejandro Barbosa Lee. All rights reserved.
 
 import UIKit
 
-protocol IHomeViewController: class {
+protocol IHomeViewController: Any {
 	var router: IHomeRouter? { get set }
 }
 
@@ -34,7 +34,18 @@ class HomeViewController: BaseViewController {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        self.router = HomeRouter(view: self)
         self.setUpViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,25 +68,33 @@ class HomeViewController: BaseViewController {
         self.btnStart.setTitle(HomeModel.Constants.start, for: .normal)
     }
     
+    ///Animation to show the views
     private func animate(){
-        UIView.animate(withDuration: 0.6,
-                       delay: 0,
-                       options: .curveEaseOut,
-                       animations: {
-            self.imgMeliYPosition.constant -= self.deviceSize.height * 0.35
-            self.imgMeliWidth.constant = 150
-            self.viewWelcome.alpha = 1
-            self.viewWelcomeYPosition.constant -= self.deviceSize.height * 0.2
-            self.viewInfo.alpha = 1
-            self.viewInfoYPosition.constant -= self.deviceSize.height * 0.1
-            self.btnStart.isHidden = false
-            self.btnStart.alpha = 1
-            self.btnStartYPosition.constant -= self.deviceSize.height * 0.15
-            self.view.layoutIfNeeded()
-        }, completion: {(finished:Bool) in
-            self.isFirstTime = false
-        })
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.6,
+                           delay: 0,
+                           options: .curveEaseOut,
+                           animations: {
+                self.imgMeliYPosition.constant -= ScreenSize.screenHeight * 0.35
+                self.imgMeliWidth.constant = 150
+                self.viewWelcome.alpha = 1
+                self.viewWelcomeYPosition.constant -= ScreenSize.screenHeight * 0.2
+                self.viewInfo.alpha = 1
+                self.viewInfoYPosition.constant -= ScreenSize.screenHeight * 0.1
+                self.btnStart.isHidden = false
+                self.btnStart.alpha = 1
+                self.btnStartYPosition.constant -= ScreenSize.screenHeight * 0.15
+                self.view.layoutIfNeeded()
+            }, completion: {(finished:Bool) in
+                self.isFirstTime = false
+            })
+        }
     }
+    
+    @IBAction func onStartClick(_ sender: Any) {
+        self.router?.navigateToProductList()
+    }
+    
 }
 
 extension HomeViewController: IHomeViewController {

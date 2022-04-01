@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="koh-3Z-daq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -15,6 +15,22 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="udR-2d-nb7">
+            <objects>
+                <navigationController id="koh-3Z-daq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eMH-7k-zDy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hgP-QN-7MB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ru-na-PRC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-899" y="80"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -24,14 +40,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Meli" translatesAutoresizingMaskIntoConstraints="NO" id="gik-QV-vkl">
-                                <rect key="frame" x="57" y="337.5" width="300" height="231"/>
+                                <rect key="frame" x="57" y="359.5" width="300" height="231"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gik-QV-vkl" secondAttribute="height" multiplier="100:77" id="04P-Hf-5yv"/>
                                     <constraint firstAttribute="width" constant="300" id="WDT-HQ-NWL"/>
                                 </constraints>
                             </imageView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSs-XC-MXI">
-                                <rect key="frame" x="0.0" y="393" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="415" width="414" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNu-EI-aEp">
                                         <rect key="frame" x="207" y="42" width="0.0" height="0.0"/>
@@ -56,7 +72,7 @@
                                 </constraints>
                             </view>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZpM-u8-VN2">
-                                <rect key="frame" x="31" y="493" width="352" height="101"/>
+                                <rect key="frame" x="31" y="519.5" width="352" height="101"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtk-gK-Er6">
                                         <rect key="frame" x="176" y="20" width="0.0" height="0.0"/>
@@ -82,7 +98,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhK-6c-Ytz">
-                                <rect key="frame" x="41.5" y="881" width="331" height="50"/>
+                                <rect key="frame" x="41.5" y="925" width="331" height="50"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.43137254899999999" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="wGJ-Ce-Url"/>
@@ -91,6 +107,9 @@
                                 <state key="normal" title="Empezar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onStartClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h2m-IP-uD2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -108,6 +127,7 @@
                             <constraint firstItem="gik-QV-vkl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="p4r-po-vHK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zhx-z9-2Au"/>
                     <connections>
                         <outlet property="btnStart" destination="XhK-6c-Ytz" id="9bz-Ct-zWk"/>
                         <outlet property="btnStartYPosition" destination="3wX-8z-Duv" id="vrU-4Q-dSx"/>
