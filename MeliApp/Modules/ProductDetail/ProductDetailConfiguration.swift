@@ -9,14 +9,16 @@ import Foundation
 import UIKit
 
 class ProductDetailConfiguration {
-    static func setup(productId: String) -> UIViewController {
+    static func setup(productId: String, installment: Installment?) -> UIViewController {
         let controller = ProductDetailViewController()
         let router = ProductDetailRouter(view: controller)
         let presenter = ProductDetailPresenter(view: controller)
         let manager = ProductDetailManager()
         let interactor = ProductDetailInteractor(presenter: presenter,
                                                  manager: manager,
-                                                 productId: productId)
+                                                 productId: productId,
+                                                 installment: installment
+        )
         
         controller.interactor = interactor
         controller.router = router

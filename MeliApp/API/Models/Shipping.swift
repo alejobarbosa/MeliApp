@@ -14,6 +14,7 @@ struct Shipping: Codable {
     var mode: String
     var tags: [String]
     var logistic_type: String
+    var localPickUp: Bool?
     
     enum CodingKeys: String, CodingKey {
         case freeShipping = "free_shipping"
@@ -21,5 +22,6 @@ struct Shipping: Codable {
         case mode
         case tags
         case logistic_type
+        case localPickUp = "local_pick_up"
     }
 }

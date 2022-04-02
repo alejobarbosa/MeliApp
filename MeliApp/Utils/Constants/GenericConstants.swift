@@ -33,6 +33,9 @@ struct GenericConstants {
     
     //MARK: Generic
     static let acceptTitle = "Aceptar"
+    static let noInterest = " sin interés"
+    static let inStr = "en "
+    static let xStr = "x "
     
     
 }

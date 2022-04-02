@@ -7,5 +7,17 @@
 
 import UIKit
 
-struct ProductDetailModel {	
+struct ProductDetailModel {
+    
+    struct Constants {
+        static let newEn = "new"
+        static let newSp = "Nuevo"
+        static let used = "Usado"
+        static let color = "COLOR"
+        static let installment = "Hasta 48 cuotas"
+        static let freeShipping = "¡Envío gratis!"
+        static let shippingCost = "Este producto tiene un costo adicional por envío"
+        static let divider = " / "
+        static let firstPage = "1 / "
+    }
 }

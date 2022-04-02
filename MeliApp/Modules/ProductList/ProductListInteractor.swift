@@ -30,6 +30,7 @@ class ProductListInteractor: IProductListInteractor {
     	self.manager = manager
     }
     
+    //MARK: Service Search Product
     func searchForProduct(text: String) {
         self.isLoading = true
         self.manager?.searchForProduct(text: text,
@@ -63,6 +64,7 @@ class ProductListInteractor: IProductListInteractor {
         })
     }
     
+    //MARK: Service Get More Products
     func getMoreProducts() {
         if !isLoading {
             guard var paging = self.paging else {

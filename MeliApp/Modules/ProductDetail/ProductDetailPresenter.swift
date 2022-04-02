@@ -9,6 +9,9 @@ import UIKit
 
 protocol IProductDetailPresenter: IBasePresenter {
     func showError(message: String)
+    func showData(productDetail: ProductDetail,
+                  images: [UIImage],
+                  installment: Installment?)
 }
 
 class ProductDetailPresenter: IProductDetailPresenter {	
@@ -20,5 +23,13 @@ class ProductDetailPresenter: IProductDetailPresenter {
     
     func showError(message: String) {
         self.view?.showError(message: message)
+    }
+    
+    func showData(productDetail: ProductDetail,
+                  images: [UIImage],
+                  installment: Installment?){
+        self.view?.showData(productDetail: productDetail,
+                            images: images,
+                            installment: installment)
     }
 }

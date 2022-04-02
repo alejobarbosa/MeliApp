@@ -17,6 +17,8 @@ struct ProductDetail: Codable {
     var availability: Int
     var detailImages: [DetailImage]
     var shipping: Shipping
+    var condition: String?
+    var attributes: [Attribute]?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -28,5 +30,7 @@ struct ProductDetail: Codable {
         case availability = "available_quantity"
         case detailImages = "pictures"
         case shipping
+        case condition
+        case attributes
     }
 }

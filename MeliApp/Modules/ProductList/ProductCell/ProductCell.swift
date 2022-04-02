@@ -34,7 +34,7 @@ class ProductCell: UITableViewCell {
     // MARK: - Set Price Label
     ///Method to set the text for the price label
     private func setPriceLabel(price: Double, currency: String){
-        let priceString = self.getProductPrice(price: price) + currency
+        let priceString = price.getCurrencyString() + currency
         var mutablePriceString = NSMutableAttributedString()
         mutablePriceString = NSMutableAttributedString(string: priceString,
                                                        attributes: [NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: 22)])
@@ -54,32 +54,9 @@ class ProductCell: UITableViewCell {
     // MARK: - Set Installment Label
     ///Method to set the text for the installment label
     private func setInstallmentLabel(installment: Installment?) {
-        var installmentString = self.getProductInterests(installment: installment)
+        let installmentString = self.getProductInterests(installment: installment)
         let hasInterestRate = installment?.rate ?? 1 == 0 ? false : true
-        installmentString = !hasInterestRate ? installmentString + " sin interés" : installmentString
-        var mutablePriceString = NSMutableAttributedString()
-        mutablePriceString = NSMutableAttributedString(string: installmentString,
-                                                       attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 12)])
-        if !hasInterestRate {
-            
-            mutablePriceString.addAttribute(NSAttributedString.Key.foregroundColor,
-                                       value: UIColor.AppColor.green,
-                                       range: NSRange(location: 2,
-                                                      length: installmentString.count - 2))
-        }
-        self.lblInstallment.attributedText = mutablePriceString
-    }
-    
-    // MARK: - Get Product Price
-    ///Method to fortmat the price to currency
-    private func getProductPrice(price: Double) -> String{
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencySymbol = "$ "
-        formatter.currencyGroupingSeparator = "."
-        formatter.maximumFractionDigits = 0
-        let priceString = formatter.string(from: NSNumber(value: price)) ?? "$ 0"
-        return priceString
+        self.lblInstallment.attributedText = installmentString.getInstallmentAttributed(hasInterest: hasInterestRate, isForDetail: false)
     }
     
     // MARK: - Get Product Installment
@@ -87,13 +64,8 @@ class ProductCell: UITableViewCell {
     func getProductInterests(installment: Installment?) -> String {
         let numberOfPayments = installment?.quantity ?? 0
         let amount = installment?.amount ?? 0.0
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencySymbol = "$ "
-        formatter.currencyGroupingSeparator = "."
-        formatter.maximumFractionDigits = 0
-        let amountStrig = formatter.string(from: NSNumber(value: amount)) ?? "$ 0"
-        return "en " + String(numberOfPayments) + "x " + amountStrig
+        let amountStrig = amount.getCurrencyString()
+        return GenericConstants.inStr + String(numberOfPayments) + GenericConstants.xStr + amountStrig
     }
     
 }

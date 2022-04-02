@@ -80,6 +80,23 @@ class BaseViewController: UIViewController {
                                                 handler: handlerAccept))
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    ///Method to embed a view into a scroll
+    public func embedInScroll(_ contentView: UIView, height: CGFloat){
+        self.view.layoutIfNeeded()
+        contentView.removeFromSuperview()
+        let scroll = UIScrollView()
+        self.view.addSubview(scroll)
+        scroll.addConstraintTopParent()
+        scroll.addWidthConstraintParent()
+        scroll.addBottomConstraintParent()
+        scroll.addConstraintXCenterParent()
+        scroll.addSubview(contentView)
+        contentView.addConstraintTopParent()
+        contentView.addWidthConstraintParent()
+        contentView.addConstraintXCenterParent()
+        scroll.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: height)
+    }
 
 
 }

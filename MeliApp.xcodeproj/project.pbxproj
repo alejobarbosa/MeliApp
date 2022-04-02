@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5307EEA927F7ECA2003BE862 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307EEA827F7ECA2003BE862 /* Attributes.swift */; };
+		5307EEAB27F7EFFB003BE862 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307EEAA27F7EFFB003BE862 /* DoubleExtension.swift */; };
+		5307EEAE27F7F408003BE862 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307EEAD27F7F408003BE862 /* StringExtension.swift */; };
+		5307EEB027F80A3E003BE862 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307EEAF27F80A3E003BE862 /* UIViewExtension.swift */; };
 		530CE0D127F6928A00487BB4 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CE0D027F6928A00487BB4 /* UIImageViewExtension.swift */; };
 		530CE0DB27F6BED300487BB4 /* ProductDetailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CE0D327F6BED300487BB4 /* ProductDetailConfiguration.swift */; };
 		530CE0DC27F6BED300487BB4 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CE0D427F6BED300487BB4 /* ProductDetailPresenter.swift */; };
@@ -84,6 +88,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5307EEA827F7ECA2003BE862 /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
+		5307EEAA27F7EFFB003BE862 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		5307EEAD27F7F408003BE862 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		5307EEAF27F80A3E003BE862 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		530CE0D027F6928A00487BB4 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		530CE0D327F6BED300487BB4 /* ProductDetailConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailConfiguration.swift; sourceTree = "<group>"; };
 		530CE0D427F6BED300487BB4 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
@@ -172,6 +180,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5307EEAC27F7F32A003BE862 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				530CE0F127F6D30A00487BB4 /* GenericConstants.swift */,
+				531666EE27F63C6000E79BC1 /* ServiceConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		530CE0D227F6BEBA00487BB4 /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +225,7 @@
 		531666DA27F634AE00E79BC1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5307EEA827F7ECA2003BE862 /* Attributes.swift */,
 				531666E527F6354B00E79BC1 /* DetailImage.swift */,
 				531666EC27F63B8000E79BC1 /* ErrorResponses.swift */,
 				531666DF27F634FA00E79BC1 /* Installment.swift */,
@@ -223,10 +241,13 @@
 		531666EB27F6368800E79BC1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5339FF0127F50492003035B0 /* UIColorExtension.swift */,
+				5307EEAA27F7EFFB003BE862 /* DoubleExtension.swift */,
 				5344F19527F64CD800C63B92 /* LoggerExtension.swift */,
-				5344F19927F6610400C63B92 /* UITableViewCellExtension.swift */,
+				5307EEAD27F7F408003BE862 /* StringExtension.swift */,
+				5339FF0127F50492003035B0 /* UIColorExtension.swift */,
 				530CE0D027F6928A00487BB4 /* UIImageViewExtension.swift */,
+				5344F19927F6610400C63B92 /* UITableViewCellExtension.swift */,
+				5307EEAF27F80A3E003BE862 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,10 +283,9 @@
 		5339FF0027F5045B003035B0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5307EEAC27F7F32A003BE862 /* Constants */,
 				531666EB27F6368800E79BC1 /* Extensions */,
 				531666E927F6368200E79BC1 /* ScreenSize.swift */,
-				531666EE27F63C6000E79BC1 /* ServiceConstants.swift */,
-				530CE0F127F6D30A00487BB4 /* GenericConstants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -512,15 +532,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5307EEA927F7ECA2003BE862 /* Attributes.swift in Sources */,
 				53F3F78627F237BE0011CC48 /* BaseViewController.swift in Sources */,
 				530CE0EB27F6CBC400487BB4 /* BasePresenter.swift in Sources */,
 				5344F19627F64CD800C63B92 /* LoggerExtension.swift in Sources */,
 				5362CFBC27F4C87700301AD0 /* HomeRouter.swift in Sources */,
+				5307EEAB27F7EFFB003BE862 /* DoubleExtension.swift in Sources */,
 				530CE0F027F6CBC400487BB4 /* BaseManager.swift in Sources */,
 				531666E427F6353F00E79BC1 /* ProductDetail.swift in Sources */,
 				5362CFBF27F4C87700301AD0 /* HomeModel.swift in Sources */,
 				530CE0DC27F6BED300487BB4 /* ProductDetailPresenter.swift in Sources */,
 				531666E027F634FA00E79BC1 /* Installment.swift in Sources */,
+				5307EEB027F80A3E003BE862 /* UIViewExtension.swift in Sources */,
 				53F3F78227F237BE0011CC48 /* AppDelegate.swift in Sources */,
 				531666EF27F63C6000E79BC1 /* ServiceConstants.swift in Sources */,
 				530CE0DB27F6BED300487BB4 /* ProductDetailConfiguration.swift in Sources */,
@@ -530,6 +553,7 @@
 				53F3F78427F237BE0011CC48 /* SceneDelegate.swift in Sources */,
 				530CE0EC27F6CBC400487BB4 /* BaseRouter.swift in Sources */,
 				5339FF1127F50763003035B0 /* ProductListModel.swift in Sources */,
+				5307EEAE27F7F408003BE862 /* StringExtension.swift in Sources */,
 				5339FF0C27F50763003035B0 /* ProductListConfiguration.swift in Sources */,
 				5339FF0F27F50763003035B0 /* ProductListViewController.swift in Sources */,
 				5362CFC127F4C87700301AD0 /* HomeManager.swift in Sources */,

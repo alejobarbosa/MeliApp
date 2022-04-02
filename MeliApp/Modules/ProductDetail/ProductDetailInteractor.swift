@@ -17,13 +17,16 @@ class ProductDetailInteractor: IProductDetailInteractor {
     var manager: IProductDetailManager?
     var productId: String!
     var productDetail: ProductDetail?
+    var installment: Installment?
 
     init(presenter: IProductDetailPresenter,
          manager: IProductDetailManager,
-         productId: String) {
+         productId: String,
+         installment: Installment?) {
     	self.presenter = presenter
     	self.manager = manager
         self.productId = productId
+        self.installment = installment
         self.getProductDetail()
     }
     
@@ -33,6 +36,11 @@ class ProductDetailInteractor: IProductDetailInteractor {
             switch result {
             case .success(let productDetail):
                 self?.productDetail = productDetail
+                self?.getImages(fromURLs: productDetail.detailImages.map { $0.url }) { images in
+                    self?.presenter?.showData(productDetail: productDetail,
+                                              images: images,
+                                              installment: self?.installment)
+                }
                 break
                 
             case .failure(let error):
@@ -51,6 +59,30 @@ class ProductDetailInteractor: IProductDetailInteractor {
             return error.localizedDescription
         }
         return GenericConstants.ErrorView.errorMessage
+    }
+    
+    //MARK: Images
+    ///Method to get images from URL strings
+    func getImages(fromURLs urls: [String], completion: @escaping ([UIImage]) -> Void) {
+        let group = DispatchGroup()
+        var images: [UIImage] =  .init(repeating: UIImage(), count: urls.count)
+        
+        for (index, urlString) in urls.enumerated() {
+            group.enter()
+            DispatchQueue.global().async {
+                var image: UIImage?
+                if let url = URL(string: urlString) {
+                    if let data = try? Data(contentsOf: url) {
+                        image = UIImage(data: data)
+                    }
+                }
+                images[index] = image ?? UIImage()
+                group.leave()
+            }
+        }
+        group.notify(queue: .main) {
+            completion(images)
+        }
     }
     
 }

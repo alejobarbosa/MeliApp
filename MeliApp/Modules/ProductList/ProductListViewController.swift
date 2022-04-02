@@ -80,7 +80,8 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let productId = self.interactor?.products[indexPath.row].id {
-            self.router?.navigateToProductDetail(productId: productId)
+            self.router?.navigateToProductDetail(productId: productId,
+                                                 installment: self.interactor?.products[indexPath.row].installments)
         }
     }
     

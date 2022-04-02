@@ -49,6 +49,6 @@ extension UIColor{
     struct AppColor {
         static let yellow = UIColor(hex: "FEE800")
         static let darkBlue = UIColor(hex: "2E3272")
-        static let green = UIColor(hex: "5BB478")
+        static let green = UIColor(hex: "4AA35A")
     }
 }
