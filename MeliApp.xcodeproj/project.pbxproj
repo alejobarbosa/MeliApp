@@ -11,6 +11,10 @@
 		5307EEAB27F7EFFB003BE862 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307EEAA27F7EFFB003BE862 /* DoubleExtension.swift */; };
 		5307EEAE27F7F408003BE862 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307EEAD27F7F408003BE862 /* StringExtension.swift */; };
 		5307EEB027F80A3E003BE862 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307EEAF27F80A3E003BE862 /* UIViewExtension.swift */; };
+		5307EEB227F80D45003BE862 /* ComunicationManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307EEB127F80D45003BE862 /* ComunicationManagerTest.swift */; };
+		5307EEB927F81C33003BE862 /* MockProductsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5307EEB827F81C33003BE862 /* MockProductsResponse.json */; };
+		5307EEBB27F89467003BE862 /* MockComunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307EEBA27F89467003BE862 /* MockComunicationManager.swift */; };
+		5307EEBD27F8990C003BE862 /* MockProductDetailResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5307EEBC27F8990C003BE862 /* MockProductDetailResponse.json */; };
 		530CE0D127F6928A00487BB4 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CE0D027F6928A00487BB4 /* UIImageViewExtension.swift */; };
 		530CE0DB27F6BED300487BB4 /* ProductDetailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CE0D327F6BED300487BB4 /* ProductDetailConfiguration.swift */; };
 		530CE0DC27F6BED300487BB4 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CE0D427F6BED300487BB4 /* ProductDetailPresenter.swift */; };
@@ -65,7 +69,7 @@
 		53F3F78927F237BE0011CC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F78727F237BE0011CC48 /* Main.storyboard */; };
 		53F3F78B27F237C00011CC48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F78A27F237C00011CC48 /* Assets.xcassets */; };
 		53F3F78E27F237C00011CC48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F78C27F237C00011CC48 /* LaunchScreen.storyboard */; };
-		53F3F79927F237C00011CC48 /* MeliAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F79827F237C00011CC48 /* MeliAppTests.swift */; };
+		53F3F79927F237C00011CC48 /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F79827F237C00011CC48 /* BaseTests.swift */; };
 		53F3F7A327F237C00011CC48 /* MeliAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F7A227F237C00011CC48 /* MeliAppUITests.swift */; };
 		53F3F7A527F237C00011CC48 /* MeliAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F7A427F237C00011CC48 /* MeliAppUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +96,10 @@
 		5307EEAA27F7EFFB003BE862 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		5307EEAD27F7F408003BE862 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		5307EEAF27F80A3E003BE862 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		5307EEB127F80D45003BE862 /* ComunicationManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComunicationManagerTest.swift; sourceTree = "<group>"; };
+		5307EEB827F81C33003BE862 /* MockProductsResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockProductsResponse.json; sourceTree = "<group>"; };
+		5307EEBA27F89467003BE862 /* MockComunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockComunicationManager.swift; sourceTree = "<group>"; };
+		5307EEBC27F8990C003BE862 /* MockProductDetailResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockProductDetailResponse.json; sourceTree = "<group>"; };
 		530CE0D027F6928A00487BB4 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		530CE0D327F6BED300487BB4 /* ProductDetailConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailConfiguration.swift; sourceTree = "<group>"; };
 		530CE0D427F6BED300487BB4 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
@@ -149,7 +157,7 @@
 		53F3F78D27F237C00011CC48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53F3F78F27F237C00011CC48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53F3F79427F237C00011CC48 /* MeliAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		53F3F79827F237C00011CC48 /* MeliAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliAppTests.swift; sourceTree = "<group>"; };
+		53F3F79827F237C00011CC48 /* BaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
 		53F3F79E27F237C00011CC48 /* MeliAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F3F7A227F237C00011CC48 /* MeliAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliAppUITests.swift; sourceTree = "<group>"; };
 		53F3F7A427F237C00011CC48 /* MeliAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -187,6 +195,23 @@
 				531666EE27F63C6000E79BC1 /* ServiceConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		5307EEB327F81AD3003BE862 /* ResponseMocks */ = {
+			isa = PBXGroup;
+			children = (
+				5307EEBA27F89467003BE862 /* MockComunicationManager.swift */,
+			);
+			path = ResponseMocks;
+			sourceTree = "<group>";
+		};
+		5307EEB427F81AF5003BE862 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				5307EEBC27F8990C003BE862 /* MockProductDetailResponse.json */,
+				5307EEB827F81C33003BE862 /* MockProductsResponse.json */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 		530CE0D227F6BEBA00487BB4 /* ProductDetail */ = {
@@ -343,7 +368,10 @@
 		53F3F79727F237C00011CC48 /* MeliAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				53F3F79827F237C00011CC48 /* MeliAppTests.swift */,
+				5307EEB427F81AF5003BE862 /* MockData */,
+				5307EEB327F81AD3003BE862 /* ResponseMocks */,
+				53F3F79827F237C00011CC48 /* BaseTests.swift */,
+				5307EEB127F80D45003BE862 /* ComunicationManagerTest.swift */,
 			);
 			path = MeliAppTests;
 			sourceTree = "<group>";
@@ -515,6 +543,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5307EEB927F81C33003BE862 /* MockProductsResponse.json in Resources */,
+				5307EEBD27F8990C003BE862 /* MockProductDetailResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,7 +618,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53F3F79927F237C00011CC48 /* MeliAppTests.swift in Sources */,
+				5307EEB227F80D45003BE862 /* ComunicationManagerTest.swift in Sources */,
+				53F3F79927F237C00011CC48 /* BaseTests.swift in Sources */,
+				5307EEBB27F89467003BE862 /* MockComunicationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
