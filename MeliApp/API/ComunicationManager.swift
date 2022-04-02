@@ -17,6 +17,11 @@ class ComunicationManager {
                           offset: Int,
                           handler: @escaping (Result<Products, ErrorResponses>) -> Void) {
         
+        //Validation Internet
+        if !NetworkManager().validateConnection() {
+            handler(.failure(.noInternet(GenericConstants.ErrorView.noConectionMessage)))
+        }
+        
         //Building URL
         let queryItem = URLQueryItem(name: ServiceConstants.ServiceKeys.queryKey,value: query)
         let offset = URLQueryItem(name: ServiceConstants.ServiceKeys.offsetKey, value: String(offset))
@@ -87,6 +92,10 @@ class ComunicationManager {
     //MARK: - Get Product Details
     func getProductDetail(forProduct productId: String,
                           handler: @escaping (Result<ProductDetail, ErrorResponses>) -> Void) {
+        //Validation Internet
+        if !NetworkManager().validateConnection() {
+            handler(.failure(.noInternet(GenericConstants.ErrorView.noConectionMessage)))
+        }
         
         //Building URL
         let queryItem = URLQueryItem(name: ServiceConstants.ServiceKeys.includeKey,

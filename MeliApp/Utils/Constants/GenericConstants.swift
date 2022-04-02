@@ -13,6 +13,7 @@ struct GenericConstants {
     struct ErrorView {
         static let errorTitle = "¡Ups!"
         static let errorMessage = "Ocurrió un error inesperado. Por favor intente más tarde"
+        static let noConectionMessage = "Parece que no tienes conección a internet."
     }
     
     //MARK: Logs Categories

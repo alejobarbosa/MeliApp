@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="s9n-bt-eES">
+                <searchBar contentMode="redraw" placeholder="Buscar en Mercado Libre" translatesAutoresizingMaskIntoConstraints="NO" id="s9n-bt-eES">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>

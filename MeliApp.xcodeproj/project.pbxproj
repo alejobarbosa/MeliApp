@@ -15,6 +15,7 @@
 		5307EEB927F81C33003BE862 /* MockProductsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5307EEB827F81C33003BE862 /* MockProductsResponse.json */; };
 		5307EEBB27F89467003BE862 /* MockComunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307EEBA27F89467003BE862 /* MockComunicationManager.swift */; };
 		5307EEBD27F8990C003BE862 /* MockProductDetailResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5307EEBC27F8990C003BE862 /* MockProductDetailResponse.json */; };
+		5307EEBF27F8C5A9003BE862 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307EEBE27F8C5A9003BE862 /* NetworkManager.swift */; };
 		530CE0D127F6928A00487BB4 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CE0D027F6928A00487BB4 /* UIImageViewExtension.swift */; };
 		530CE0DB27F6BED300487BB4 /* ProductDetailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CE0D327F6BED300487BB4 /* ProductDetailConfiguration.swift */; };
 		530CE0DC27F6BED300487BB4 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CE0D427F6BED300487BB4 /* ProductDetailPresenter.swift */; };
@@ -100,6 +101,7 @@
 		5307EEB827F81C33003BE862 /* MockProductsResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockProductsResponse.json; sourceTree = "<group>"; };
 		5307EEBA27F89467003BE862 /* MockComunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockComunicationManager.swift; sourceTree = "<group>"; };
 		5307EEBC27F8990C003BE862 /* MockProductDetailResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockProductDetailResponse.json; sourceTree = "<group>"; };
+		5307EEBE27F8C5A9003BE862 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		530CE0D027F6928A00487BB4 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		530CE0D327F6BED300487BB4 /* ProductDetailConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailConfiguration.swift; sourceTree = "<group>"; };
 		530CE0D427F6BED300487BB4 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				531666DA27F634AE00E79BC1 /* Models */,
 				5344F19727F6512900C63B92 /* ComunicationManager.swift */,
+				5307EEBE27F8C5A9003BE862 /* NetworkManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				530CE0EC27F6CBC400487BB4 /* BaseRouter.swift in Sources */,
 				5339FF1127F50763003035B0 /* ProductListModel.swift in Sources */,
 				5307EEAE27F7F408003BE862 /* StringExtension.swift in Sources */,
+				5307EEBF27F8C5A9003BE862 /* NetworkManager.swift in Sources */,
 				5339FF0C27F50763003035B0 /* ProductListConfiguration.swift in Sources */,
 				5339FF0F27F50763003035B0 /* ProductListViewController.swift in Sources */,
 				5362CFC127F4C87700301AD0 /* HomeManager.swift in Sources */,

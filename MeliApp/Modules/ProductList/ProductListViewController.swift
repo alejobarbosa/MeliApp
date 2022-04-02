@@ -33,7 +33,7 @@ class ProductListViewController: BaseViewController {
                                         forCellReuseIdentifier: ProductCell.identifier)
         self.tableViewProducts.separatorStyle = .none
         self.searchBar.delegate = self
-        self.searchBar.showsCancelButton = true
+        self.searchBar.accessibilityTraits = UIAccessibilityTraits.searchField
     }
     
     @objc func endEditing(){
@@ -107,6 +107,16 @@ extension ProductListViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.view.endEditing(true)
+    }
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        self.searchBar.showsCancelButton = true
+        return true
+    }
+    
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        self.searchBar.showsCancelButton = false
+        return true
     }
     
 }

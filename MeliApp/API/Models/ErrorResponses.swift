@@ -13,4 +13,5 @@ enum ErrorResponses: Error {
     case serviceFailure(Int)
     case invalidResponse(Error, String?)
     case unknownError(Error?)
+    case noInternet(String)
 }
